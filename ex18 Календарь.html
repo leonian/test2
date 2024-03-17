@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Пример 18 - Календарь</title>
 </head>
 
 <body>
-  <div class="elem">111</div>
-  <div class="elem">1111</div>
+  <div class="alert">Вас же просили год ввести... трудно что ли</div>
+
 
   <script>
     function createCalend (elem, year){
@@ -59,7 +59,12 @@
       elem.innerHTML=t
     }
     
-    createCalend('body',2024)
+    let year = 2024
+    year = prompt('Введите год для генерации календаря',2024 )
+    if (year==Nan) 
+   { 
+    createCalend('body',year)
+  }
    
 
     function getDay(date){
